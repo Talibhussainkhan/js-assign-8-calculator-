@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <input id="input-field" type="text" >
+            <div class="btn">
+                <button onclick="numericalNum(7)">7</button>
+                <button onclick="numericalNum(8)">8</button>
+                <button onclick="numericalNum(9)">9</button>
+                <button class="operator-btn" onclick="operators(minus)">-</button>
+            </div>
+            <div class="btn">
+                <button onclick="numericalNum(4)">4</button>
+                <button onclick="numericalNum(5)">5</button>
+                <button onclick="numericalNum(6)">6</button>
+                <button class="operator-btn" onclick="operators(multiply)">*</button>
+            </div>
+            <div class="btn">
+                <button onclick="numericalNum(1)">1</button>
+                <button onclick="numericalNum(2)">2</button>
+                <button onclick="numericalNum(3)">3</button>
+                <button class="operator-btn" onclick="operators(plus)">+</button>
+            </div>
+            <div class="btn">
+                <button onclick="numericalNum(dot)">.</button>
+                <button class="operator-btn" onclick="operators(divide)">/</button>
+                <button  onclick="clearInput()">C</button>
+                <button class="equal-btn" onclick="equal()">=</button>
+            </div>
+        </div>
+      
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
