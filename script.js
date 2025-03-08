@@ -1,30 +1,18 @@
 const input = document.getElementById("input-field");
+let operator = ["+", "-", "/", "*"]
 
-let plus = "+";
-let minus = "-";
-let multiply = "*";
-let divide = "/";
-let dot = ".";
-
-
-function numericalNum (a){
-  input.value += a
-}
-function operators(a){
-    if(input.value[input.value.length - 1] === a){
-      a = "";
-    }
-    input.value += a;          
-}
-
-function equal(){
-    if(input.value === ""){
-        input.value = 0
-    }else{
-        input.value = eval(input.value)    
-    }
-}
-
-function clearInput(){
+const abc = (a)=>{
+    let lastChar = input.value.slice(-1);
+    // console.log(operator.indexOf(lastChar))
+  if(a === "="){
+    input.value = eval(input.value)
+  }else if(operator.indexOf(lastChar) !== -1 && operator.indexOf(a) !== -1){
+    input.value = input.value.slice(0, -1) + a ;
+  }
+  else if(a === "del"){
     input.value = ""
+  }
+  else{
+    input.value += a;
+  }
 }
